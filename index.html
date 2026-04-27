@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>narmo.dev</title>
+<meta name="description" content="A developer who occasionally ships things.">
+<style>
+  :root {
+    --bg: #fafaf7;
+    --fg: #1a1a1a;
+    --muted: #6b6b6b;
+    --accent: #c2410c;
+    --rule: #e5e5e0;
+    --art: #d4a373;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e0e0c;
+      --fg: #e8e8e3;
+      --muted: #8a8a85;
+      --accent: #fb923c;
+      --rule: #2a2a28;
+      --art: #4a4a45;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    font: 16px/1.6 ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+  h1 {
+    font-size: 1.5rem;
+    margin: 0 0 0.25rem;
+    font-weight: 600;
+  }
+  h2 {
+    font-size: 1rem;
+    margin: 2.5rem 0 0.75rem;
+    color: var(--muted);
+    font-weight: 400;
+    text-transform: lowercase;
+    letter-spacing: 0.05em;
+  }
+  p { margin: 0 0 1rem; }
+  a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--accent);
+  }
+  a:hover { border-bottom-style: solid; }
+  .tagline { color: var(--muted); margin-bottom: 2rem; }
+  ul { padding: 0; list-style: none; }
+  li { margin: 0 0 0.6rem; }
+  .links li::before {
+    content: "-> ";
+    color: var(--muted);
+  }
+  hr {
+    border: 0;
+    border-top: 1px solid var(--rule);
+    margin: 3rem 0;
+  }
+  footer {
+    color: var(--muted);
+    font-size: 0.85rem;
+  }
+  .cursor {
+    display: inline-block;
+    width: 0.5em;
+    background: var(--fg);
+    color: var(--bg);
+    animation: blink 1.1s step-end infinite;
+  }
+  @keyframes blink { 50% { background: transparent; } }
+
+  pre.ascii {
+    color: var(--art);
+    font-size: 0.78rem;
+    line-height: 1.05;
+    margin: 0 0 2rem;
+    overflow-x: auto;
+    white-space: pre;
+  }
+  pre.ascii.banner { font-size: 0.7rem; }
+  pre.divider {
+    color: var(--rule);
+    margin: 2.5rem 0;
+    line-height: 1;
+    overflow: hidden;
+    user-select: none;
+  }
+
+  /* day / night swap */
+  .day { display: block; }
+  .night { display: none; }
+  @media (prefers-color-scheme: dark) {
+    .day { display: none; }
+    .night { display: block; }
+  }
+</style>
+</head>
+<body>
+
+<pre class="ascii banner">
+  _   _    _    ____  __  __  ___
+ | \ | |  / \  |  _ \|  \/  |/ _ \
+ |  \| | / _ \ | |_) | |\/| | | | |
+ | |\  |/ ___ \|  _ &lt;| |  | | |_| |
+ |_| \_/_/   \_\_| \_\_|  |_|\___/
+</pre>
+
+<pre class="ascii day">
+        \   |   /            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+         \  |  /             |  $ whoami              |
+      ----(   )----          |  > narmo               |
+         /  |  \             |  $ uptime              |
+        /   |   \            |  > too long           _|
+                             ~~~~~~~~~~~~~~~~~~~~~~~~
+</pre>
+
+<pre class="ascii night">
+       *       .       *      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+   .       *        .         |  $ whoami              |
+       (   )      *           |  > narmo               |
+   *  C     )        .        |  $ uptime              |
+        ( _ )   .             |  > too long           _|
+   .         *          *     ~~~~~~~~~~~~~~~~~~~~~~~~
+</pre>
+
+<h1>narmo<span id="typed"></span><span class="cursor">&nbsp;</span></h1>
+<p class="tagline">software developer. building products end to end.</p>
+
+<p>
+  A software developer drawn to complex, ambiguous problems &mdash; the kind
+  that don't fit neatly into a ticket and reward careful thinking. I work
+  best where a system needs to be understood deeply before it can be built
+  well.
+</p>
+
+<p>
+  I care about clean architecture, pragmatic trade-offs, and code that
+  stays maintainable long after the original context fades. Performance,
+  reliability, and developer experience are first-class concerns, not
+  afterthoughts.
+</p>
+
+<h2>// currently</h2>
+<ul>
+  <li>building products at <a href="https://brite-apps.com">Brite Apps OÜ</a></li>
+  <li>open to interesting collaborations</li>
+</ul>
+
+<h2>// elsewhere</h2>
+<ul class="links">
+  <li><a href="https://github.com/Narmo" rel="me">github.com/Narmo</a></li>
+  <li><a href="https://www.linkedin.com/in/nikitadenin/" rel="me">linkedin.com/in/nikitadenin</a></li>
+  <li><a href="https://brite-apps.com">brite apps oü</a></li>
+</ul>
+
+<pre class="divider">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</pre>
+
+<footer>
+  <p>&copy; 2026 Nikita Denin</p>
+</footer>
+
+<script>
+  (function () {
+    var lorem = "lorem ipsum dolor sit amet, consectetur adipiscing elit, " +
+                "sed do eiusmod tempor incididunt ut labore et dolore magna " +
+                "aliqua. ut enim ad minim veniam, quis nostrud exercitation " +
+                "ullamco laboris nisi ut aliquip ex ea commodo consequat. ";
+    var easterEgg = "wake up and smell the ashes. ";
+
+    var target = document.getElementById("typed");
+    var buffer = ": ";
+    var i = 0;
+
+    function extend() {
+      while (buffer.length < i + 64) {
+        if (Math.random() < 0.35) {
+          buffer += easterEgg;
+        } else {
+          buffer += lorem;
+        }
+      }
+    }
+
+    window.addEventListener("keydown", function (e) {
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+
+      if (e.key === "Backspace") {
+        if (i > 0) {
+          i--;
+          target.textContent = buffer.slice(0, i);
+          e.preventDefault();
+        }
+        return;
+      }
+
+      if (e.key.length !== 1) return;
+
+      extend();
+      target.textContent += buffer.charAt(i++);
+      e.preventDefault();
+    });
+  })();
+</script>
+
+</body>
+</html>
