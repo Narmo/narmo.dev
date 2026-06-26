@@ -174,14 +174,15 @@
 
 <script>
   (function () {
-    var lorem = "lorem ipsum dolor sit amet, consectetur adipiscing elit, " +
-                "sed do eiusmod tempor incididunt ut labore et dolore magna " +
-                "aliqua. ut enim ad minim veniam, quis nostrud exercitation " +
-                "ullamco laboris nisi ut aliquip ex ea commodo consequat. ";
+    var lorem = atob("bG9yZW0gaXBzdW0gZG9sb3Igc2l0IGFtZXQsIGNvbnNlY3RldHVyIGFkaXBpc2Np" +
+                     "bmcgZWxpdCwgc2VkIGRvIGVpdXNtb2QgdGVtcG9yIGluY2lkaWR1bnQgdXQgbGFi" +
+                     "b3JlIGV0IGRvbG9yZSBtYWduYSBhbGlxdWEuIHV0IGVuaW0gYWQgbWluaW0gdmVu" +
+                     "aWFtLCBxdWlzIG5vc3RydWQgZXhlcmNpdGF0aW9uIHVsbGFtY28gbGFib3JpcyBu" +
+                     "aXNpIHV0IGFsaXF1aXAgZXggZWEgY29tbW9kbyBjb25zZXF1YXQuIA==");
     var easterEggs = [
-      "wake up and smell the ashes. ",
-      "fitter. happier. more productive. "
-    ];
+      "d2FrZSB1cCBhbmQgc21lbGwgdGhlIGFzaGVzLiA=",
+      "Zml0dGVyLiBoYXBwaWVyLiBtb3JlIHByb2R1Y3RpdmUuIA=="
+    ].map(function (s) { return atob(s); });
 
     var target = document.getElementById("typed");
     var buffer = ": ";
