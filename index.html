@@ -178,7 +178,10 @@
                 "sed do eiusmod tempor incididunt ut labore et dolore magna " +
                 "aliqua. ut enim ad minim veniam, quis nostrud exercitation " +
                 "ullamco laboris nisi ut aliquip ex ea commodo consequat. ";
-    var easterEgg = "wake up and smell the ashes. ";
+    var easterEggs = [
+      "wake up and smell the ashes. ",
+      "fitter. happier. more productive. "
+    ];
 
     var target = document.getElementById("typed");
     var buffer = ": ";
@@ -187,7 +190,7 @@
     function extend() {
       while (buffer.length < i + 64) {
         if (Math.random() < 0.35) {
-          buffer += easterEgg;
+          buffer += easterEggs[Math.floor(Math.random() * easterEggs.length)];
         } else {
           buffer += lorem;
         }
